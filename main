@@ -1,0 +1,8 @@
+syms t n 
+T=2*pi; %T= period
+w0= 2*pi/T; %w0 = frequency 
+f= exp(t); % f= function 
+a0= (1/T)*int(f,t,0,2)
+an= (2/T)*int(f*cos(n*w0*t),t,0,T)
+bn=(2/T)*int(f*sin(n*w0*t),t,0,T)
+n=1:5 %number of terms you want, entered as 1:N
